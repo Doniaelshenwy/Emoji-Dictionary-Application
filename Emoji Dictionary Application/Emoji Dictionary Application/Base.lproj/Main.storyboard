@@ -55,6 +55,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZFx-jw-ky9" kind="push" id="Fg1-0E-7ZN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -73,6 +76,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sv9-Ai-gcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689.8550724637682" y="57.589285714285708"/>
+        </scene>
+        <!--First Screen View Controller-->
+        <scene sceneID="qUr-s3-3WQ">
+            <objects>
+                <viewController storyboardIdentifier="FVC" id="ZFx-jw-ky9" customClass="firstScreenViewController" customModule="Emoji_Dictionary_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qS0-g2-gVU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjK-xB-GNF">
+                                <rect key="frame" x="20" y="209" width="75" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="444-tt-RdM">
+                                <rect key="frame" x="20" y="360" width="141.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bcbc" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbb-wG-dYc">
+                                <rect key="frame" x="129" y="209" width="265" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="f62-cl-MZo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hvhnv" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcy-Cw-wTE">
+                                <rect key="frame" x="187" y="360" width="207" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="NyU-j3-4kc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XDC-7b-LIX"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="444-tt-RdM" firstAttribute="top" secondItem="rjK-xB-GNF" secondAttribute="bottom" constant="121" id="0aa-MF-U4l"/>
+                            <constraint firstItem="444-tt-RdM" firstAttribute="leading" secondItem="XDC-7b-LIX" secondAttribute="leading" constant="20" id="6aW-ng-5fn"/>
+                            <constraint firstItem="Cbb-wG-dYc" firstAttribute="centerY" secondItem="rjK-xB-GNF" secondAttribute="centerY" id="IWF-GD-AdW"/>
+                            <constraint firstItem="Kcy-Cw-wTE" firstAttribute="top" secondItem="Cbb-wG-dYc" secondAttribute="bottom" constant="121" id="LXl-ZN-okI"/>
+                            <constraint firstItem="rjK-xB-GNF" firstAttribute="leading" secondItem="XDC-7b-LIX" secondAttribute="leading" constant="20" id="MOZ-99-4rU"/>
+                            <constraint firstItem="rjK-xB-GNF" firstAttribute="top" secondItem="XDC-7b-LIX" secondAttribute="top" constant="121" id="WrB-O0-vah"/>
+                            <constraint firstItem="Kcy-Cw-wTE" firstAttribute="centerY" secondItem="444-tt-RdM" secondAttribute="centerY" id="cDR-uC-5Mx"/>
+                            <constraint firstItem="Cbb-wG-dYc" firstAttribute="trailing" secondItem="Kcy-Cw-wTE" secondAttribute="trailing" id="o8j-oe-SCz"/>
+                            <constraint firstItem="XDC-7b-LIX" firstAttribute="trailing" secondItem="Kcy-Cw-wTE" secondAttribute="trailing" constant="20" id="qga-sf-6Xi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xmT-Ba-STl"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Kcy-Cw-wTE" id="Krl-s7-ejN"/>
+                        <outlet property="nameLabel" destination="Cbb-wG-dYc" id="87a-iw-PSP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwR-h6-4z7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2553.6231884057975" y="57.589285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ry7-lo-WtN">
@@ -96,6 +162,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

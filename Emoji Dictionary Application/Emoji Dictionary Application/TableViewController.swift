@@ -34,8 +34,13 @@ class TableViewController: UITableViewController {
 
         cell.textLabel?.text = arrayEmoji[indexPath.row].name
         cell.detailTextLabel?.text = arrayEmoji[indexPath.row].description
-
+        
         cell.showsReorderControl = true
+        
+        
+        
+        
+        
         return cell
     }
     
